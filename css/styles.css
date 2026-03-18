@@ -3691,6 +3691,14 @@ img.u-pull-left {
     margin-bottom : var(--vspace-0_75);
 }
 
+.modal-popup__hero {
+    width         : 100%;
+    height        : auto;
+    display       : block;
+    object-fit    : cover;
+    aspect-ratio  : 16 / 9;
+}
+
 .modal-popup h5 {
     font-family   : var(--font-1);
     font-size     : var(--text-size);
@@ -3758,6 +3766,71 @@ img.u-pull-left {
 .modal-popup__details:hover {
     background-color : var(--color-body);
     color            : white;
+}
+
+.modal-popup--offside {
+    background    : linear-gradient(180deg, #07100e 0%, #ffffff 52%);
+    border-radius : 2.4rem;
+    overflow      : hidden;
+    box-shadow    : 0 3.2rem 7rem rgba(0, 0, 0, 0.24);
+}
+
+.modal-popup--offside .modal-popup__hero {
+    margin-bottom : 0;
+}
+
+.modal-popup--offside .modal-popup__desc {
+    padding : var(--vspace-1) var(--vspace-1_25) 0;
+}
+
+.modal-popup--offside h5 {
+    font-size      : calc(var(--text-size) * 1.08);
+    font-weight    : 600;
+    letter-spacing : -0.01em;
+    margin-bottom  : calc(var(--space) * 0.2);
+}
+
+.modal-popup--offside p {
+    color         : rgba(0, 0, 0, 0.68);
+    margin-bottom : var(--vspace-0_75);
+}
+
+.modal-popup--offside .modal-popup__details {
+    display         : inline-flex;
+    align-items     : center;
+    justify-content : center;
+    gap             : 0.8rem;
+    margin          : 0 var(--vspace-1_25) var(--vspace-1_25);
+    min-height      : 5.6rem;
+    padding         : 0 2.2rem;
+    border-radius   : 999px;
+    border          : 1px solid rgba(19, 216, 205, 0.16);
+    background      : linear-gradient(135deg, #071816 0%, #0fcfc6 100%);
+    box-shadow      : 0 1.6rem 3.2rem rgba(8, 31, 29, 0.22);
+    color           : #f6fffe;
+    font-size       : 1.5rem;
+    font-weight     : 600;
+    letter-spacing  : 0.02em;
+    line-height     : 1;
+    text-decoration : none;
+    transition      : transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.modal-popup--offside .modal-popup__details::after {
+    content        : "\2197";
+    font-size      : 1.6rem;
+    line-height    : 1;
+    color          : rgba(246, 255, 254, 0.92);
+    transform      : translateY(-0.05em);
+}
+
+.modal-popup--offside .modal-popup__details:focus,
+.modal-popup--offside .modal-popup__details:hover {
+    background  : linear-gradient(135deg, #0a201d 0%, #1ce8dd 100%);
+    color       : #ffffff;
+    box-shadow  : 0 2rem 3.8rem rgba(7, 26, 24, 0.28);
+    transform   : translateY(-2px);
+    filter      : saturate(1.08);
 }
 
 /* ------------------------------------------------------------------- 
